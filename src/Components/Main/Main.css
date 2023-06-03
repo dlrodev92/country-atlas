@@ -1,0 +1,102 @@
+
+
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    transition: all 0.4s ease-in-out;
+  }
+
+   header {
+    background-color: white;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+  }
+
+ .dark{
+    background-color: #414647;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .page-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 63px;
+  }
+
+  .search-container{
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .search{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+
+  .dark .search-container{
+    background-color: #292929;
+  }
+
+
+  .search input{
+    width: 25%;
+    min-width: 350px;
+    height: 30px;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFEF6;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.005);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border-bottom: 1px solid #FFFEF6;
+  }
+  
+  .country-dark input{
+    background-color: #333;
+    color: #fff;
+  }
+
+  .region-dark select option{
+    background-color: #333;
+    color: #fff;
+  }
+
+  .region-dark select{
+    background-color: #333;
+    color: #fff;
+  }
+  .region-dark h4{
+    color: #fff;
+  }
+
+  .country-dark h4{
+    color: #fff;
+  }
+
+  /* Here the DarkMode Classes*/
