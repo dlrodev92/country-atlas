@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import "./Modal.css";
 import Map from "./Map/Map";
 import { useLoadScript } from "@react-google-maps/api";
 
 function Modal(props) {
+  const{selectedCard, handleSelectedCardChange, data} = props;
   const [borders, setBorders] = useState("");
 
   const { isLoaded } = useLoadScript({
@@ -35,7 +36,7 @@ function Modal(props) {
     }
 
     handleBorders();
-  }, [props.selectedCard, props.handleSelectedCardChange, props.data]);
+  }, [selectedCard, handleSelectedCardChange, data]);
 
   return (
     <div className={props.darkMode ? "modal-dark" : "modal"}>
