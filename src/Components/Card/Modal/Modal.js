@@ -70,4 +70,3 @@ function Modal(props) {
 }
 
 export default Modal;
-export default Modal;
