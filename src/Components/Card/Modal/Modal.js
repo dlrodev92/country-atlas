@@ -13,19 +13,6 @@ function Modal(props) {
 });
 
 
-
-  // useEffect(() => {
-  //   if (props.selectedCard.borders === false || typeof props.selectedCard.borders === "undefined") {
-  //     setBorders("none");
-  //   } else {
-  //     setBorders(
-  //       props.selectedCard.borders.map((border) => {
-  //         return <li onClick={handleSelectedCardChange} className="border" key={border}>{border}</li>;
-  //       })
-  //     );
-  //   }
-  // }, [props.selectedCard.borders]);
-
 useEffect(() => {
   const handleBorders = () => {
     if (!props.selectedCard || !props.selectedCard.borders || props.selectedCard.borders === false) {

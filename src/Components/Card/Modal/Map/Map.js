@@ -2,14 +2,7 @@ import React from "react";
 import "./Map.css";
 import {
     GoogleMap,
-    marker,
-    directionsRenderer,
-    circle,
-    markerRenderer
 } from "@react-google-maps/api";
-
-
-
 
 function Map(props){
     return(

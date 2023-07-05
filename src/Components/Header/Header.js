@@ -37,7 +37,7 @@ function Header(props) {
         </div>
       </div>
       <div className="hero-img">
-        <img src="https://raw.githubusercontent.com/abhishek2f24/Dr.-Sheldon-Cooper-presents-FUN-with-FLAGS/master/sheldon.jpg"/>
+        <img src="https://raw.githubusercontent.com/abhishek2f24/Dr.-Sheldon-Cooper-presents-FUN-with-FLAGS/master/sheldon.jpg" alt="sheldon flags"/>
       </div>
       <div className="search-container">
         <div className={props.darkMode? "search country-dark" : "search country"}>
