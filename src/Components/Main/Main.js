@@ -32,7 +32,7 @@ function Main(props) {
     }else{
         return filterCardsByName(name);
     }
-    }, [name]);
+    }, [name,filterCardsByName,props.data]);
 
       useEffect(() => {
     if (region === "All") {
@@ -40,7 +40,7 @@ function Main(props) {
     }else{
      return filterCardsByRegion(region);
     }
-    }, [region]);
+    }, [region,filterCardsByRegion,props.data]);
   
     const handleRegion = (value) => {
     setRegion(value);

@@ -31,7 +31,7 @@ useEffect(() => {
   };
 
   handleBorders();
-}, [props.selectedCard]);
+}, [props.selectedCard,handleSelectedCardChange]);
 
   function handleSelectedCardChange(event){
     const actualBorder = event.target.textContent;
@@ -42,7 +42,7 @@ useEffect(() => {
   return (
     <div className={props.darkMode?"modal-dark":"modal"}>
       
-      <div className="flag"><img src={props.selectedCard.flags.svg}/>
+      <div className="flag"><img src={props.selectedCard.flags.svg} alt="flag"/>
       <h1 className="close" onClick={props.onClose}>X</h1></div>
       <h1 className="title">{props.selectedCard.name.official}</h1>
       <div className={props.darkMode?"dark-details":"details"}>
