@@ -29,7 +29,7 @@ function Modal(props) {
     };
 
     handleBorders();
-  }, [props.selectedCard]);
+  }, [props.selectedCard, handleSelectedCardChange]);
 
   function handleSelectedCardChange(event) {
     const actualBorder = event.target.textContent;
