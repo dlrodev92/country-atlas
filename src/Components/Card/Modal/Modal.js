@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./Modal.css";
 import Map from "./Map/Map";
 import { useLoadScript } from "@react-google-maps/api";
@@ -28,14 +28,14 @@ function Modal(props) {
       }
     };
 
-    handleBorders();
-  }, [props.selectedCard, handleSelectedCardChange]);
+    function handleSelectedCardChange(event) {
+      const actualBorder = event.target.textContent;
+      const newCountry = props.data.find((country) => country.cca3 === actualBorder);
+      props.handleSelectedCardChange(newCountry);
+    }
 
-  function handleSelectedCardChange(event) {
-    const actualBorder = event.target.textContent;
-    const newCountry = props.data.find((country) => country.cca3 === actualBorder);
-    props.handleSelectedCardChange(newCountry);
-  }
+    handleBorders();
+  }, [props.selectedCard, props.handleSelectedCardChange, props.data]);
 
   return (
     <div className={props.darkMode ? "modal-dark" : "modal"}>
